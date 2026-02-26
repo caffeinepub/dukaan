@@ -1,0 +1,62 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-expand-the-shopkeeper-registration-and-network-filter-to-support-cities-from-all-countries-worldwide-replace-or-augment-the-current-city-input-dropdown-with-a-comprehensive-searchable-list-of-major-cities-from-every-country-e-g-using-a-static-dataset-of-world-cities-grouped-by-country-the-city-field-in-both-the-shopkeeperregistration-form-and-the-shopkeepernetwork-filter-should-allow-the-user-to-type-and-search-for-any-city-globally",
+      "featureTitle": "Expand the shopkeeper registration and network filter to support cities from all countries worldwide. Replace or augment the current city input/dropdown with a comprehensive searchable list of major cities from every country (e.g., using a static dataset of world cities grouped by country). The city field in both the ShopkeeperRegistration form and the ShopkeeperNetwork filter should allow the user to type and search for any city globally.",
+      "files": [
+        "frontend/src/components/common/CitySearchInput.tsx",
+        "frontend/src/data/worldCities.ts",
+        "frontend/src/pages/ShopkeeperRegistration.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-add-edit-product-form-productformpage-to-include-input-fields-for-the-new-pricing-details-mrp-wholesale-price-discount-percentage-unit-of-measurement-and-product-amenities-attributes-features-as-comma-separated-tags-product-tags-warranty-or-shelf-life-display-these-fields-in-clearly-labeled-sections-within-the-form-validate-that-mrp-and-wholesale-price-are-non-negative-numbers-when-provided",
+      "featureTitle": "Update the Add/Edit Product form (ProductFormPage) to include input fields for the new pricing details (MRP, wholesale price, discount percentage, unit of measurement) and product amenities/attributes (features as comma-separated tags, product tags, warranty or shelf life). Display these fields in clearly labeled sections within the form. Validate that MRP and wholesale price are non-negative numbers when provided.",
+      "files": [
+        "frontend/src/pages/ProductFormPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-productdetail-page-and-productcard-component-to-display-the-new-pricing-details-mrp-with-strikethrough-if-discount-applies-selling-price-wholesale-price-discount-badge-and-product-amenities-features-as-pills-badges-tags-warranty-shelf-life-info-show-a-price-details-section-and-an-amenities-features-section-on-the-detail-view",
+      "featureTitle": "Update the ProductDetail page and ProductCard component to display the new pricing details (MRP with strikethrough if discount applies, selling price, wholesale price, discount badge) and product amenities (features as pills/badges, tags, warranty/shelf life info). Show a 'Price Details' section and an 'Amenities & Features' section on the detail view.",
+      "files": [
+        "frontend/src/components/products/ProductCard.tsx",
+        "frontend/src/pages/ProductDetail.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

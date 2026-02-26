@@ -1,0 +1,45 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-26T05:52:15.682Z",
+  "summary": "The diff implements most of the requested requirements. REQ-15 (global city list with searchable dropdown) is implemented via CitySearchInput and worldCities dataset for ShopkeeperRegistration, but the ShopkeeperNetwork filter page is not evidenced as updated. REQ-16 and REQ-17 backend model extensions are implemented in backend/main.mo with migration support, though field names differ from spec (unit vs unitOfMeasurement, amenities vs features, warranty vs warrantyOrShelfLife). REQ-18 ProductFormPage and REQ-19 ProductDetail/ProductCard updates are implemented.",
+  "missing_requirements": [
+    {
+      "id": "REQ-15",
+      "requirement": "ShopkeeperNetwork filter by city should support filtering against the full global city list using a searchable CitySearchInput component",
+      "reason": "CitySearchInput is integrated into ShopkeeperRegistration.tsx but ShopkeeperNetwork page does not appear in the modified files list, so there is no evidence the city filter in ShopkeeperNetwork was updated to use the global city list.",
+      "evidence": [
+        "frontend/src/pages/ShopkeeperRegistration.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "A separate backend/migration.mo module file was created providing a typed data migration function from old product schema to new schema",
+      "reason": "The build request only states existing products must continue to work without errors via safe defaults. It does not request a separate migration module file. Creating migration.mo goes beyond what was specified.",
+      "evidence": [
+        "backend/migration.mo"
+      ]
+    },
+    {
+      "description": "ProductCard displays MRP with strikethrough alongside the selling price in addition to the discount badge",
+      "reason": "REQ-19 AC specifies ProductCard optionally shows a discount badge only. Showing MRP with strikethrough on the card was specified only for ProductDetail, not ProductCard.",
+      "evidence": [
+        "frontend/src/components/products/ProductCard.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.78,
+  "changed_files": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "frontend/src/components/common/CitySearchInput.tsx",
+    "frontend/src/components/products/ProductCard.tsx",
+    "frontend/src/data/worldCities.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/pages/ProductDetail.tsx",
+    "frontend/src/pages/ProductFormPage.tsx",
+    "frontend/src/pages/ShopkeeperRegistration.tsx",
+    "project_state.json"
+  ]
+}

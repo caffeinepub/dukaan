@@ -1,0 +1,19 @@
+{
+  "frontend/src/index.css": "Global styles with Indian market-inspired OKLCH color system (saffron, maroon, ivory), Poppins + Baloo 2 fonts, and utility classes for gradients, card hover effects, and bottom nav safe area.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with custom Poppins/Baloo 2 fonts, saffron/maroon/ivory/gold color tokens, enhanced border radii, card shadows, and fade-in animation.",
+  "frontend/src/hooks/useQueries.ts": "All React Query hooks for backend operations: dashboard metrics, products CRUD, stock management, trending, shortlist, and shopkeeper network.",
+  "frontend/src/App.tsx": "Main app with TanStack Router setup, all routes defined (dashboard, products, stock, trending, shortlist, network), and AppLayout wrapping all pages.",
+  "frontend/src/components/layout/AppLayout.tsx": "App shell with sticky maroon header showing Dukaan logo/branding and wrapping all pages with bottom navigation padding.",
+  "frontend/src/components/layout/BottomNav.tsx": "Fixed bottom navigation bar with 6 tabs (Dashboard, Products, Stock, Trending, Saved, Network) with active state indicators in saffron.",
+  "frontend/src/pages/Dashboard.tsx": "Dashboard page with hero banner, 6 metric cards (total products, stock value, low stock alerts, shortlisted, trending, shopkeepers), and quick action buttons.",
+  "frontend/src/components/products/ProductCard.tsx": "Reusable product card with image, category, name, price in ₹, stock badge, trending badge, and shortlist toggle button.",
+  "frontend/src/pages/ProductList.tsx": "Product list page with search bar, category filter dropdown, product grid, and floating Add button.",
+  "frontend/src/pages/ProductDetail.tsx": "Product detail page with full info, image, price, stock, trending/shortlist toggles, edit/delete actions with confirmation dialog.",
+  "frontend/src/pages/ProductFormPage.tsx": "Add/Edit product form with validation for all fields (name, category, description, price, stock, imageUrl) supporting both create and update modes.",
+  "frontend/src/pages/StockManagement.tsx": "Stock management page with low-stock alert banner, stats summary, and inline editable stock rows with save buttons per product.",
+  "frontend/src/pages/TrendingProducts.tsx": "Trending products page showing only trending items with flame badges and shortlist toggle functionality.",
+  "frontend/src/pages/Shortlist.tsx": "Shortlist page showing saved products with remove-from-shortlist buttons and navigation to product detail.",
+  "frontend/src/pages/ShopkeeperNetwork.tsx": "Shopkeeper network directory with search, city/category filters, shopkeeper cards, and Register My Shop button.",
+  "frontend/src/pages/ShopkeeperDetail.tsx": "Shopkeeper profile detail page showing owner name, shop name, location, phone (clickable), and category.",
+  "frontend/src/pages/ShopkeeperRegistration.tsx": "Shop registration form with validation for owner name, shop name, city, phone (Indian mobile format), and category."
+}

@@ -1,0 +1,219 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Dukaan - An all-in-one app for Indian shop owners to manage products, stock, trending items, shortlists, and connect with other shopkeepers.",
+  "architectural_notes": [
+    "App name: Dukaan — targeted at Indian shop owners",
+    "Core sections: Product Management, Stock Management, Trending Products, Shortlist, Shop Network, Dashboard"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-visually-rich-indian-market-inspired-design-theme-using-warm-saffron-deep-maroon-and-ivory-tones-with-bold-hindi-flavored-english-typography-card-based-layouts-and-a-persistent-bottom-navigation-bar-with-sections-dashboard-products-stock-trending-shortlist-and-network",
+      "title": "Create a visually rich Indian market-inspired design theme using warm saffron, deep maroon, and ivory tones with bold Hindi-flavored English typography, card-based layouts, and a persistent bottom navigation bar with sections: Dashboard, Products, Stock, Trending, Shortlist, and Network.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-dashboard-screen-that-shows-key-business-metrics-total-products-listed-total-stock-value-number-of-low-stock-items-number-of-shortlisted-products-and-a-count-of-connected-shopkeepers",
+      "title": "Build a Dashboard screen that shows key business metrics: total products listed, total stock value, number of low-stock items, number of shortlisted products, and a count of connected shopkeepers.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-product-list-screen-showing-all-products-in-a-card-grid-with-product-name-category-price-in-stock-quantity-and-shortlist-toggle-button-include-a-search-bar-and-category-filter-tapping-a-product-opens-its-detail-screen-showing-full-description-stock-info-price-trending-status-and-options-to-edit-or-delete",
+      "title": "Build a Product List screen showing all products in a card grid with product name, category, price (in ₹), stock quantity, and shortlist toggle button. Include a search bar and category filter. Tapping a product opens its Detail screen showing full description, stock info, price, trending status, and options to edit or delete.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-add-edit-product-form-screen-where-shopkeepers-can-input-product-name-category-description-price-stock-quantity-and-image-url-validate-all-required-fields-before-saving",
+      "title": "Add an Add/Edit Product form screen where shopkeepers can input product name, category, description, price, stock quantity, and image URL. Validate all required fields before saving.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-stock-management-screen-that-lists-all-products-with-their-current-stock-levels-highlight-low-stock-items-below-threshold-in-red-orange-allow-inline-stock-quantity-editing-with-a-save-button-per-row",
+      "title": "Build a Stock Management screen that lists all products with their current stock levels. Highlight low-stock items (below threshold) in red/orange. Allow inline stock quantity editing with a save button per row.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-trending-products-screen-that-displays-all-products-marked-as-trending-in-a-visually-prominent-card-layout-with-a-trending-badge-include-an-option-to-toggle-trending-status-from-the-detail-view",
+      "title": "Build a Trending Products screen that displays all products marked as trending in a visually prominent card layout with a 'Trending' badge. Include an option to toggle trending status from the detail view.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-shortlist-screen-that-shows-all-shortlisted-products-in-a-card-layout-include-a-remove-from-shortlist-button-on-each-card",
+      "title": "Build a Shortlist screen that shows all shortlisted products in a card layout. Include a remove-from-shortlist button on each card.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-shopkeeper-network-screen-that-displays-a-directory-of-all-registered-shopkeepers-in-a-card-list-showing-their-shop-name-owner-name-location-and-goods-category-include-a-search-filter-by-city-or-category-tapping-a-shopkeeper-opens-a-profile-detail-view-with-their-full-info",
+      "title": "Build a Shopkeeper Network screen that displays a directory of all registered shopkeepers in a card list showing their shop name, owner name, location, and goods category. Include a search/filter by city or category. Tapping a shopkeeper opens a profile detail view with their full info.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-logo-image-for-the-dukaan-app-a-stylized-storefront-icon-with-a-welcoming-awning-in-saffron-and-maroon-colors-clean-and-modern-with-the-text-dukaan-below-in-bold",
+      "title": "Generate a logo image for the Dukaan app: a stylized storefront icon with a welcoming awning in saffron and maroon colors, clean and modern, with the text 'Dukaan' below in bold.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-expand-the-shopkeeper-registration-and-network-filter-to-support-cities-from-all-countries-worldwide-replace-or-augment-the-current-city-input-dropdown-with-a-comprehensive-searchable-list-of-major-cities-from-every-country-e-g-using-a-static-dataset-of-world-cities-grouped-by-country-the-city-field-in-both-the-shopkeeperregistration-form-and-the-shopkeepernetwork-filter-should-allow-the-user-to-type-and-search-for-any-city-globally",
+      "title": "Expand the shopkeeper registration and network filter to support cities from all countries worldwide. Replace or augment the current city input/dropdown with a comprehensive searchable list of major cities from every country (e.g., using a static dataset of world cities grouped by country). The city field in both the ShopkeeperRegistration form and the ShopkeeperNetwork filter should allow the user to type and search for any city globally.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-add-edit-product-form-productformpage-to-include-input-fields-for-the-new-pricing-details-mrp-wholesale-price-discount-percentage-unit-of-measurement-and-product-amenities-attributes-features-as-comma-separated-tags-product-tags-warranty-or-shelf-life-display-these-fields-in-clearly-labeled-sections-within-the-form-validate-that-mrp-and-wholesale-price-are-non-negative-numbers-when-provided",
+      "title": "Update the Add/Edit Product form (ProductFormPage) to include input fields for the new pricing details (MRP, wholesale price, discount percentage, unit of measurement) and product amenities/attributes (features as comma-separated tags, product tags, warranty or shelf life). Display these fields in clearly labeled sections within the form. Validate that MRP and wholesale price are non-negative numbers when provided.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-productdetail-page-and-productcard-component-to-display-the-new-pricing-details-mrp-with-strikethrough-if-discount-applies-selling-price-wholesale-price-discount-badge-and-product-amenities-features-as-pills-badges-tags-warranty-shelf-life-info-show-a-price-details-section-and-an-amenities-features-section-on-the-detail-view",
+      "title": "Update the ProductDetail page and ProductCard component to display the new pricing details (MRP with strikethrough if discount applies, selling price, wholesale price, discount badge) and product amenities (features as pills/badges, tags, warranty/shelf life info). Show a 'Price Details' section and an 'Amenities & Features' section on the detail view.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Product Management - List, add, edit, delete products with details",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Stock Management - Track inventory levels with low stock alerts",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Trending Products - Show what's selling well",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Shortlist - Save favorite/shortlisted products for quick access",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Shop Network - Connect shopkeepers with each other",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Dashboard - Overview of key business metrics",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Implement a Product Management module in the backend to store products with fields: id, name, category, description, price (in INR), stock quantity, imageUrl, isTrending flag, isShortlisted flag, and shopkeeperId. Expose CRUD operations: addProduct, getProducts, getProductById, updateProduct, deleteProduct.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Implement Stock Management in the backend with a method to get all low-stock products (stock quantity below a configurable threshold, default 10), and a method to update stock quantity for a given product.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Implement a Trending Products feature in the backend with methods to mark/unmark a product as trending (setTrending), and to retrieve all trending products (getTrendingProducts).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Implement a Shortlist feature in the backend with methods to toggle shortlist status on a product (toggleShortlist) and to retrieve all shortlisted products (getShortlistedProducts).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Implement a Shopkeeper Network feature in the backend. Store shopkeeper profiles with fields: id, name, shopName, location (city), phone, and category of goods. Expose methods: registerShopkeeper, getAllShopkeepers, getShopkeeperById.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Add all country cities to the shopkeeper network location/city dropdown or filter",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Add detailed product price information and basic product amenities/attributes to product listings",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Extend the product data model in the backend to include additional price-related fields: MRP (Maximum Retail Price), wholesale price, discount percentage, and unit of measurement (e.g., per kg, per piece, per dozen). Update addProduct and updateProduct methods to accept these new fields. Update getProductById and getProducts to return them.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Extend the product data model in the backend to include basic amenities/attributes: a list of product features or highlights (e.g., 'Organic', 'Handmade', 'ISO Certified'), a product tags list, and a warranty/shelf-life field (Text). Update addProduct and updateProduct to accept these fields. Update getProductById and getProducts to return them.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Dukaan",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

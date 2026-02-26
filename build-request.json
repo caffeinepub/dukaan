@@ -1,0 +1,123 @@
+{
+  "kind": "build_request",
+  "title": "Add global city list, detailed product pricing, and product amenities/attributes",
+  "projectName": "Dukaan",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-15",
+      "text": "Expand the shopkeeper registration and network filter to support cities from all countries worldwide. Replace or augment the current city input/dropdown with a comprehensive searchable list of major cities from every country (e.g., using a static dataset of world cities grouped by country). The city field in both the ShopkeeperRegistration form and the ShopkeeperNetwork filter should allow the user to type and search for any city globally.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "add all country cities"
+        ]
+      },
+      "acceptanceCriteria": [
+        "ShopkeeperRegistration form city field provides a searchable dropdown with major cities from all countries worldwide.",
+        "ShopkeeperNetwork filter by city supports filtering against the full global city list.",
+        "Cities are grouped or labeled by country for clarity.",
+        "User can type to search/filter cities in real time.",
+        "Existing city values already stored in backend remain compatible."
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Extend the product data model in the backend to include additional price-related fields: MRP (Maximum Retail Price), wholesale price, discount percentage, and unit of measurement (e.g., per kg, per piece, per dozen). Update addProduct and updateProduct methods to accept these new fields. Update getProductById and getProducts to return them.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "add all product prices details"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Product record includes optional fields: mrp (Nat), wholesalePrice (Nat), discountPercent (Nat), unitOfMeasurement (Text).",
+        "addProduct and updateProduct accept these new fields.",
+        "getProductById and getProducts return these fields.",
+        "Existing products without these fields continue to work without errors (fields default to 0 or empty string)."
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Extend the product data model in the backend to include basic amenities/attributes: a list of product features or highlights (e.g., 'Organic', 'Handmade', 'ISO Certified'), a product tags list, and a warranty/shelf-life field (Text). Update addProduct and updateProduct to accept these fields. Update getProductById and getProducts to return them.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "basic amenities"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Product record includes: features ([Text]), tags ([Text]), warrantyOrShelfLife (Text).",
+        "addProduct and updateProduct accept these fields.",
+        "getProductById and getProducts return these fields.",
+        "Existing products without these fields default to empty arrays/empty string."
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "text": "Update the Add/Edit Product form (ProductFormPage) to include input fields for the new pricing details (MRP, wholesale price, discount percentage, unit of measurement) and product amenities/attributes (features as comma-separated tags, product tags, warranty or shelf life). Display these fields in clearly labeled sections within the form. Validate that MRP and wholesale price are non-negative numbers when provided.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "add all product prices details",
+          "basic amenities"
+        ]
+      },
+      "acceptanceCriteria": [
+        "ProductFormPage shows a 'Pricing Details' section with fields for MRP (₹), Wholesale Price (₹), Discount (%), and Unit of Measurement.",
+        "ProductFormPage shows a 'Product Amenities' section with fields for Features (comma-separated), Tags (comma-separated), and Warranty / Shelf Life.",
+        "MRP and wholesale price fields accept only non-negative numbers.",
+        "All new fields are optional; form submits successfully without them.",
+        "Submitted values are passed to the backend addProduct/updateProduct call."
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "text": "Update the ProductDetail page and ProductCard component to display the new pricing details (MRP with strikethrough if discount applies, selling price, wholesale price, discount badge) and product amenities (features as pills/badges, tags, warranty/shelf life info). Show a 'Price Details' section and an 'Amenities & Features' section on the detail view.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "add all product prices details",
+          "basic amenities"
+        ]
+      },
+      "acceptanceCriteria": [
+        "ProductDetail shows MRP (struck through when discount > 0), selling price, wholesale price, and discount percentage badge.",
+        "ProductDetail shows a features section with each feature rendered as a pill/badge.",
+        "ProductDetail shows tags and warranty/shelf life information.",
+        "ProductCard optionally shows a discount badge (e.g., '10% OFF') if discount percent is set.",
+        "If pricing/amenity fields are empty, those sections are hidden gracefully."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not break existing product or shopkeeper data already stored in the backend — all new fields must be optional/nullable with safe defaults.",
+    "Do not modify files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui.",
+    "All Motoko logic must remain in the single backend/main.mo actor file."
+  ],
+  "nonGoals": [
+    "Adding real-time currency conversion or live price feeds.",
+    "Integrating external city/geo APIs — use a static bundled dataset.",
+    "Adding payment processing or checkout flow.",
+    "Changing the existing visual design theme or navigation structure."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

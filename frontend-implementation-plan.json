@@ -1,0 +1,81 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add global city list, detailed product pricing, and product amenities/attributes",
+  "requirements": [
+    {
+      "id": "REQ-15",
+      "summary": "Expand shopkeeper registration and network filter to support a searchable global city list from all countries worldwide",
+      "acceptanceCriteria": [
+        "ShopkeeperRegistration form city field provides a searchable dropdown with major cities from all countries worldwide.",
+        "ShopkeeperNetwork filter by city supports filtering against the full global city list.",
+        "Cities are grouped or labeled by country for clarity.",
+        "User can type to search/filter cities in real time.",
+        "Existing city values already stored in backend remain compatible."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/worldCities.ts",
+          "operation": "create",
+          "description": "Create a static dataset of major world cities grouped by country. Export a typed array of city objects with fields: name (string), country (string), searchTerm (string combining both for filtering). Include major cities from all continents (at minimum 500+ cities covering all countries). Structure as: export const WORLD_CITIES: Array<{ name: string; country: string; searchTerm: string }> with searchTerm in lowercase for case-insensitive filtering."
+        },
+        {
+          "path": "frontend/src/components/common/CitySearchInput.tsx",
+          "operation": "create",
+          "description": "Create a reusable CitySearchInput component that wraps shadcn/ui Popover and Command components to provide a searchable city dropdown. Accept props: value (string), onChange (string => void), placeholder (string). Render a trigger button showing the selected city or placeholder. Inside the popover, render a Command with CommandInput for search and CommandList showing filtered cities grouped by country using CommandGroup. Filter WORLD_CITIES by matching the search term against the searchTerm field. When a city is selected, call onChange with the city name. Limit displayed results to 50 cities for performance."
+        },
+        {
+          "path": "frontend/src/pages/ShopkeeperRegistration.tsx",
+          "operation": "modify",
+          "description": "Replace the current location Input field (line 78-83) with the new CitySearchInput component. Import CitySearchInput from frontend/src/components/common/CitySearchInput.tsx. Pass location state as value, setLocation as onChange, and 'Select city' as placeholder. Remove the old Input import if no longer used elsewhere in the file. Keep all other form fields and validation logic unchanged."
+        },
+        {
+          "path": "frontend/src/pages/ShopkeeperNetwork.tsx",
+          "operation": "modify",
+          "description": "Replace the current city filter Input field (line 32-38) with the new CitySearchInput component. Import CitySearchInput from frontend/src/components/common/CitySearchInput.tsx. Pass cityFilter state as value, setCityFilter as onChange, and 'Filter by city' as placeholder. Keep the Clear button logic (lines 40-47) unchanged. Ensure the filterShopkeepers function (lines 49-60) continues to filter by cityFilter using case-insensitive includes matching."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Update Add/Edit Product form to include input fields for new pricing details and product amenities/attributes",
+      "acceptanceCriteria": [
+        "ProductFormPage shows a 'Pricing Details' section with fields for MRP (₹), Wholesale Price (₹), Discount (%), and Unit of Measurement.",
+        "ProductFormPage shows a 'Product Amenities' section with fields for Features (comma-separated), Tags (comma-separated), and Warranty / Shelf Life.",
+        "MRP and wholesale price fields accept only non-negative numbers.",
+        "All new fields are optional; form submits successfully without them.",
+        "Submitted values are passed to the backend addProduct/updateProduct call."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProductFormPage.tsx",
+          "operation": "modify",
+          "description": "Add state variables for the new fields: mrp (number, default 0), wholesalePrice (number, default 0), discountPercent (number, default 0), unit (string, default ''), amenities (string, default ''), tags (string, default ''), warranty (string, default ''). In edit mode (lines 41-54), populate these fields from the fetched product data: setMrp(product.mrp), setWholesalePrice(product.wholesalePrice), setDiscountPercent(product.discountPercent), setUnit(product.unit), setAmenities(product.amenities.join(', ')), setTags(product.tags.join(', ')), setWarranty(product.warranty). Add a 'Pricing Details' section after the existing description field with Label and Input pairs for MRP (type number, min 0, placeholder '₹ Maximum Retail Price'), Wholesale Price (type number, min 0, placeholder '₹ Wholesale Price'), Discount (type number, min 0, max 100, placeholder '% Discount'), and Unit (type text, placeholder 'e.g., per kg, per piece'). Add a 'Product Amenities' section after Pricing Details with Label and Input pairs for Features (type text, placeholder 'e.g., Organic, Handmade (comma-separated)'), Tags (type text, placeholder 'e.g., popular, bestseller (comma-separated)'), and Warranty/Shelf Life (type text, placeholder 'e.g., 6 months warranty'). In handleSubmit (lines 56-98), convert amenities and tags strings to arrays by splitting on comma and trimming whitespace. Pass these new fields to addProductMutation.mutateAsync and updateProductMutation.mutateAsync calls: mrp: BigInt(mrp || 0), wholesalePrice: BigInt(wholesalePrice || 0), discountPercent: BigInt(discountPercent || 0), unit: unit || '', amenities: amenities.split(',').map(a => a.trim()).filter(Boolean), tags: tags.split(',').map(t => t.trim()).filter(Boolean), warranty: warranty || ''. Ensure all new fields default to safe empty values when not provided."
+        }
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "summary": "Update ProductDetail page and ProductCard component to display new pricing details and product amenities",
+      "acceptanceCriteria": [
+        "ProductDetail shows MRP (struck through when discount > 0), selling price, wholesale price, and discount percentage badge.",
+        "ProductDetail shows a features section with each feature rendered as a pill/badge.",
+        "ProductDetail shows tags and warranty/shelf life information.",
+        "ProductCard optionally shows a discount badge (e.g., '10% OFF') if discount percent is set.",
+        "If pricing/amenity fields are empty, those sections are hidden gracefully."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProductDetail.tsx",
+          "operation": "modify",
+          "description": "After the existing price display (line 93), add a 'Price Details' section. Show MRP with a strikethrough <span className='line-through text-gray-500'>₹{Number(product.mrp)}</span> only if product.discountPercent > 0. Show the current selling price as before (line 93). Below that, show Wholesale Price: ₹{Number(product.wholesalePrice)} if wholesalePrice > 0. Show a saffron Badge component with '{Number(product.discountPercent)}% OFF' if discountPercent > 0. Add a 'Unit of Measurement' line showing product.unit if not empty. Below the existing description section (lines 95-100), add an 'Amenities & Features' section. If product.amenities is non-empty, render each amenity as a shadcn/ui Badge component in a flex wrap container. If product.tags is non-empty, render a 'Tags:' label followed by each tag as a smaller Badge in muted variant. If product.warranty is non-empty, render a 'Warranty/Shelf Life:' label with the warranty text. Hide each sub-section if its corresponding field is empty or zero."
+        },
+        {
+          "path": "frontend/src/components/products/ProductCard.tsx",
+          "operation": "modify",
+          "description": "Add a discount badge overlay to the card if product.discountPercent > 0. Position it absolutely in the top-right corner of the card (over the image area) using a saffron background Badge component with white text showing '{Number(product.discountPercent)}% OFF'. Ensure the badge has appropriate padding and is clearly visible against the product image. Keep all other card elements (image, category, name, price, stock badge, trending badge, shortlist button) unchanged."
+        }
+      ]
+    }
+  ]
+}

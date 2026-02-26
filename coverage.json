@@ -1,0 +1,92 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-26T05:52:15.685Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 5,
+    "implemented": 3,
+    "items": [
+      {
+        "id": "REQ-15",
+        "summary": "Expand the shopkeeper registration and network filter to support cities from all countries worldwide. Replace or augment the current city input/dropdown with a comprehensive searchable list of major cities from every country (e.g., using a static dataset of world cities grouped by country). The city field in both the ShopkeeperRegistration form and the ShopkeeperNetwork filter should allow the user to type and search for any city globally.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/data/worldCities.ts",
+          "frontend/src/components/common/CitySearchInput.tsx",
+          "frontend/src/pages/ShopkeeperRegistration.tsx",
+          "frontend/src/pages/ShopkeeperNetwork.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/data/worldCities.ts",
+          "frontend/src/components/common/CitySearchInput.tsx",
+          "frontend/src/pages/ShopkeeperRegistration.tsx"
+        ]
+      },
+      {
+        "id": "REQ-16",
+        "summary": "Extend the product data model in the backend to include additional price-related fields: MRP (Maximum Retail Price), wholesale price, discount percentage, and unit of measurement (e.g., per kg, per piece, per dozen). Update addProduct and updateProduct methods to accept these new fields. Update getProductById and getProducts to return them.",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-17",
+        "summary": "Extend the product data model in the backend to include basic amenities/attributes: a list of product features or highlights (e.g., 'Organic', 'Handmade', 'ISO Certified'), a product tags list, and a warranty/shelf-life field (Text). Update addProduct and updateProduct to accept these fields. Update getProductById and getProducts to return them.",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-18",
+        "summary": "Update the Add/Edit Product form (ProductFormPage) to include input fields for the new pricing details (MRP, wholesale price, discount percentage, unit of measurement) and product amenities/attributes (features as comma-separated tags, product tags, warranty or shelf life). Display these fields in clearly labeled sections within the form. Validate that MRP and wholesale price are non-negative numbers when provided.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/ProductFormPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/ProductFormPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-19",
+        "summary": "Update the ProductDetail page and ProductCard component to display the new pricing details (MRP with strikethrough if discount applies, selling price, wholesale price, discount badge) and product amenities (features as pills/badges, tags, warranty/shelf life info). Show a 'Price Details' section and an 'Amenities & Features' section on the detail view.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/ProductDetail.tsx",
+          "frontend/src/components/products/ProductCard.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/ProductDetail.tsx",
+          "frontend/src/components/products/ProductCard.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-implementation-plan.json",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/common/CitySearchInput.tsx",
+    "frontend/src/components/products/ProductCard.tsx",
+    "frontend/src/data/worldCities.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/pages/ProductDetail.tsx",
+    "frontend/src/pages/ProductFormPage.tsx",
+    "frontend/src/pages/ShopkeeperRegistration.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
