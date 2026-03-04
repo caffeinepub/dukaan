@@ -23,6 +23,7 @@ import {
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { PRODUCT_SUGGESTIONS } from "../data/productSuggestions";
+import { PRODUCT_UNIT_MAP } from "../data/productUnitMap";
 import {
   useAddProduct,
   useProductById,
@@ -321,6 +322,11 @@ export default function ProductFormPage() {
                           data-ocid={`product.suggestion.item.${index + 1}`}
                           onClick={() => {
                             setForm((prev) => ({ ...prev, name: suggestion }));
+                            // Auto-fill unit if a mapping exists and unit is currently empty
+                            const suggestedUnit = PRODUCT_UNIT_MAP[suggestion];
+                            if (suggestedUnit) {
+                              setUnit(suggestedUnit);
+                            }
                             if (errors.name)
                               setErrors((prev) => ({
                                 ...prev,
@@ -486,6 +492,12 @@ export default function ProductFormPage() {
                 placeholder="e.g. per kg, per piece"
                 className="rounded-xl font-body"
               />
+              {unit && (
+                <p className="text-[11px] text-muted-foreground font-body flex items-center gap-1">
+                  <Sparkles size={10} className="text-amber-500" />
+                  Auto-suggested — you can change it
+                </p>
+              )}
             </div>
           </div>
         </div>
