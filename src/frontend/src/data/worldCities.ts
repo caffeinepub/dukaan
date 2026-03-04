@@ -1,0 +1,1208 @@
+export interface WorldCity {
+  name: string;
+  country: string;
+  searchTerm: string;
+}
+
+export const WORLD_CITIES: WorldCity[] = [
+  // Afghanistan
+  { name: "Kabul", country: "Afghanistan", searchTerm: "kabul afghanistan" },
+  {
+    name: "Kandahar",
+    country: "Afghanistan",
+    searchTerm: "kandahar afghanistan",
+  },
+  { name: "Herat", country: "Afghanistan", searchTerm: "herat afghanistan" },
+  {
+    name: "Mazar-i-Sharif",
+    country: "Afghanistan",
+    searchTerm: "mazar-i-sharif afghanistan",
+  },
+  // Albania
+  { name: "Tirana", country: "Albania", searchTerm: "tirana albania" },
+  { name: "Durrës", country: "Albania", searchTerm: "durres albania" },
+  // Algeria
+  { name: "Algiers", country: "Algeria", searchTerm: "algiers algeria" },
+  { name: "Oran", country: "Algeria", searchTerm: "oran algeria" },
+  {
+    name: "Constantine",
+    country: "Algeria",
+    searchTerm: "constantine algeria",
+  },
+  // Angola
+  { name: "Luanda", country: "Angola", searchTerm: "luanda angola" },
+  { name: "Huambo", country: "Angola", searchTerm: "huambo angola" },
+  // Argentina
+  {
+    name: "Buenos Aires",
+    country: "Argentina",
+    searchTerm: "buenos aires argentina",
+  },
+  { name: "Córdoba", country: "Argentina", searchTerm: "cordoba argentina" },
+  { name: "Rosario", country: "Argentina", searchTerm: "rosario argentina" },
+  { name: "Mendoza", country: "Argentina", searchTerm: "mendoza argentina" },
+  { name: "La Plata", country: "Argentina", searchTerm: "la plata argentina" },
+  {
+    name: "Mar del Plata",
+    country: "Argentina",
+    searchTerm: "mar del plata argentina",
+  },
+  // Armenia
+  { name: "Yerevan", country: "Armenia", searchTerm: "yerevan armenia" },
+  // Australia
+  { name: "Sydney", country: "Australia", searchTerm: "sydney australia" },
+  {
+    name: "Melbourne",
+    country: "Australia",
+    searchTerm: "melbourne australia",
+  },
+  { name: "Brisbane", country: "Australia", searchTerm: "brisbane australia" },
+  { name: "Perth", country: "Australia", searchTerm: "perth australia" },
+  { name: "Adelaide", country: "Australia", searchTerm: "adelaide australia" },
+  { name: "Canberra", country: "Australia", searchTerm: "canberra australia" },
+  {
+    name: "Gold Coast",
+    country: "Australia",
+    searchTerm: "gold coast australia",
+  },
+  {
+    name: "Newcastle",
+    country: "Australia",
+    searchTerm: "newcastle australia",
+  },
+  // Austria
+  { name: "Vienna", country: "Austria", searchTerm: "vienna austria" },
+  { name: "Graz", country: "Austria", searchTerm: "graz austria" },
+  { name: "Linz", country: "Austria", searchTerm: "linz austria" },
+  { name: "Salzburg", country: "Austria", searchTerm: "salzburg austria" },
+  // Azerbaijan
+  { name: "Baku", country: "Azerbaijan", searchTerm: "baku azerbaijan" },
+  // Bahrain
+  { name: "Manama", country: "Bahrain", searchTerm: "manama bahrain" },
+  // Bangladesh
+  { name: "Dhaka", country: "Bangladesh", searchTerm: "dhaka bangladesh" },
+  {
+    name: "Chittagong",
+    country: "Bangladesh",
+    searchTerm: "chittagong bangladesh",
+  },
+  { name: "Khulna", country: "Bangladesh", searchTerm: "khulna bangladesh" },
+  {
+    name: "Rajshahi",
+    country: "Bangladesh",
+    searchTerm: "rajshahi bangladesh",
+  },
+  { name: "Sylhet", country: "Bangladesh", searchTerm: "sylhet bangladesh" },
+  // Belarus
+  { name: "Minsk", country: "Belarus", searchTerm: "minsk belarus" },
+  // Belgium
+  { name: "Brussels", country: "Belgium", searchTerm: "brussels belgium" },
+  { name: "Antwerp", country: "Belgium", searchTerm: "antwerp belgium" },
+  { name: "Ghent", country: "Belgium", searchTerm: "ghent belgium" },
+  { name: "Bruges", country: "Belgium", searchTerm: "bruges belgium" },
+  // Bolivia
+  { name: "La Paz", country: "Bolivia", searchTerm: "la paz bolivia" },
+  { name: "Santa Cruz", country: "Bolivia", searchTerm: "santa cruz bolivia" },
+  { name: "Cochabamba", country: "Bolivia", searchTerm: "cochabamba bolivia" },
+  // Bosnia and Herzegovina
+  {
+    name: "Sarajevo",
+    country: "Bosnia and Herzegovina",
+    searchTerm: "sarajevo bosnia",
+  },
+  // Brazil
+  { name: "São Paulo", country: "Brazil", searchTerm: "sao paulo brazil" },
+  {
+    name: "Rio de Janeiro",
+    country: "Brazil",
+    searchTerm: "rio de janeiro brazil",
+  },
+  { name: "Brasília", country: "Brazil", searchTerm: "brasilia brazil" },
+  { name: "Salvador", country: "Brazil", searchTerm: "salvador brazil" },
+  { name: "Fortaleza", country: "Brazil", searchTerm: "fortaleza brazil" },
+  {
+    name: "Belo Horizonte",
+    country: "Brazil",
+    searchTerm: "belo horizonte brazil",
+  },
+  { name: "Manaus", country: "Brazil", searchTerm: "manaus brazil" },
+  { name: "Curitiba", country: "Brazil", searchTerm: "curitiba brazil" },
+  { name: "Recife", country: "Brazil", searchTerm: "recife brazil" },
+  {
+    name: "Porto Alegre",
+    country: "Brazil",
+    searchTerm: "porto alegre brazil",
+  },
+  // Bulgaria
+  { name: "Sofia", country: "Bulgaria", searchTerm: "sofia bulgaria" },
+  { name: "Plovdiv", country: "Bulgaria", searchTerm: "plovdiv bulgaria" },
+  // Cambodia
+  {
+    name: "Phnom Penh",
+    country: "Cambodia",
+    searchTerm: "phnom penh cambodia",
+  },
+  { name: "Siem Reap", country: "Cambodia", searchTerm: "siem reap cambodia" },
+  // Cameroon
+  { name: "Yaoundé", country: "Cameroon", searchTerm: "yaounde cameroon" },
+  { name: "Douala", country: "Cameroon", searchTerm: "douala cameroon" },
+  // Canada
+  { name: "Toronto", country: "Canada", searchTerm: "toronto canada" },
+  { name: "Montreal", country: "Canada", searchTerm: "montreal canada" },
+  { name: "Vancouver", country: "Canada", searchTerm: "vancouver canada" },
+  { name: "Calgary", country: "Canada", searchTerm: "calgary canada" },
+  { name: "Edmonton", country: "Canada", searchTerm: "edmonton canada" },
+  { name: "Ottawa", country: "Canada", searchTerm: "ottawa canada" },
+  { name: "Winnipeg", country: "Canada", searchTerm: "winnipeg canada" },
+  { name: "Quebec City", country: "Canada", searchTerm: "quebec city canada" },
+  { name: "Hamilton", country: "Canada", searchTerm: "hamilton canada" },
+  // Chile
+  { name: "Santiago", country: "Chile", searchTerm: "santiago chile" },
+  { name: "Valparaíso", country: "Chile", searchTerm: "valparaiso chile" },
+  { name: "Concepción", country: "Chile", searchTerm: "concepcion chile" },
+  // China
+  { name: "Beijing", country: "China", searchTerm: "beijing china" },
+  { name: "Shanghai", country: "China", searchTerm: "shanghai china" },
+  { name: "Guangzhou", country: "China", searchTerm: "guangzhou china" },
+  { name: "Shenzhen", country: "China", searchTerm: "shenzhen china" },
+  { name: "Chengdu", country: "China", searchTerm: "chengdu china" },
+  { name: "Tianjin", country: "China", searchTerm: "tianjin china" },
+  { name: "Wuhan", country: "China", searchTerm: "wuhan china" },
+  { name: "Xi'an", country: "China", searchTerm: "xian china" },
+  { name: "Hangzhou", country: "China", searchTerm: "hangzhou china" },
+  { name: "Nanjing", country: "China", searchTerm: "nanjing china" },
+  { name: "Chongqing", country: "China", searchTerm: "chongqing china" },
+  { name: "Harbin", country: "China", searchTerm: "harbin china" },
+  { name: "Suzhou", country: "China", searchTerm: "suzhou china" },
+  { name: "Qingdao", country: "China", searchTerm: "qingdao china" },
+  { name: "Dalian", country: "China", searchTerm: "dalian china" },
+  { name: "Zhengzhou", country: "China", searchTerm: "zhengzhou china" },
+  { name: "Kunming", country: "China", searchTerm: "kunming china" },
+  { name: "Xiamen", country: "China", searchTerm: "xiamen china" },
+  { name: "Fuzhou", country: "China", searchTerm: "fuzhou china" },
+  { name: "Urumqi", country: "China", searchTerm: "urumqi china" },
+  // Colombia
+  { name: "Bogotá", country: "Colombia", searchTerm: "bogota colombia" },
+  { name: "Medellín", country: "Colombia", searchTerm: "medellin colombia" },
+  { name: "Cali", country: "Colombia", searchTerm: "cali colombia" },
+  {
+    name: "Barranquilla",
+    country: "Colombia",
+    searchTerm: "barranquilla colombia",
+  },
+  { name: "Cartagena", country: "Colombia", searchTerm: "cartagena colombia" },
+  // Congo (DRC)
+  { name: "Kinshasa", country: "Congo (DRC)", searchTerm: "kinshasa congo" },
+  {
+    name: "Lubumbashi",
+    country: "Congo (DRC)",
+    searchTerm: "lubumbashi congo",
+  },
+  // Costa Rica
+  {
+    name: "San José",
+    country: "Costa Rica",
+    searchTerm: "san jose costa rica",
+  },
+  // Croatia
+  { name: "Zagreb", country: "Croatia", searchTerm: "zagreb croatia" },
+  { name: "Split", country: "Croatia", searchTerm: "split croatia" },
+  // Cuba
+  { name: "Havana", country: "Cuba", searchTerm: "havana cuba" },
+  { name: "Santiago de Cuba", country: "Cuba", searchTerm: "santiago de cuba" },
+  // Czech Republic
+  {
+    name: "Prague",
+    country: "Czech Republic",
+    searchTerm: "prague czech republic",
+  },
+  {
+    name: "Brno",
+    country: "Czech Republic",
+    searchTerm: "brno czech republic",
+  },
+  // Denmark
+  { name: "Copenhagen", country: "Denmark", searchTerm: "copenhagen denmark" },
+  { name: "Aarhus", country: "Denmark", searchTerm: "aarhus denmark" },
+  // Dominican Republic
+  {
+    name: "Santo Domingo",
+    country: "Dominican Republic",
+    searchTerm: "santo domingo dominican republic",
+  },
+  // Ecuador
+  { name: "Quito", country: "Ecuador", searchTerm: "quito ecuador" },
+  { name: "Guayaquil", country: "Ecuador", searchTerm: "guayaquil ecuador" },
+  // Egypt
+  { name: "Cairo", country: "Egypt", searchTerm: "cairo egypt" },
+  { name: "Alexandria", country: "Egypt", searchTerm: "alexandria egypt" },
+  { name: "Giza", country: "Egypt", searchTerm: "giza egypt" },
+  { name: "Luxor", country: "Egypt", searchTerm: "luxor egypt" },
+  { name: "Aswan", country: "Egypt", searchTerm: "aswan egypt" },
+  // El Salvador
+  {
+    name: "San Salvador",
+    country: "El Salvador",
+    searchTerm: "san salvador el salvador",
+  },
+  // Ethiopia
+  {
+    name: "Addis Ababa",
+    country: "Ethiopia",
+    searchTerm: "addis ababa ethiopia",
+  },
+  { name: "Dire Dawa", country: "Ethiopia", searchTerm: "dire dawa ethiopia" },
+  // Finland
+  { name: "Helsinki", country: "Finland", searchTerm: "helsinki finland" },
+  { name: "Tampere", country: "Finland", searchTerm: "tampere finland" },
+  { name: "Turku", country: "Finland", searchTerm: "turku finland" },
+  // France
+  { name: "Paris", country: "France", searchTerm: "paris france" },
+  { name: "Marseille", country: "France", searchTerm: "marseille france" },
+  { name: "Lyon", country: "France", searchTerm: "lyon france" },
+  { name: "Toulouse", country: "France", searchTerm: "toulouse france" },
+  { name: "Nice", country: "France", searchTerm: "nice france" },
+  { name: "Nantes", country: "France", searchTerm: "nantes france" },
+  { name: "Strasbourg", country: "France", searchTerm: "strasbourg france" },
+  { name: "Bordeaux", country: "France", searchTerm: "bordeaux france" },
+  // Georgia
+  { name: "Tbilisi", country: "Georgia", searchTerm: "tbilisi georgia" },
+  // Germany
+  { name: "Berlin", country: "Germany", searchTerm: "berlin germany" },
+  { name: "Hamburg", country: "Germany", searchTerm: "hamburg germany" },
+  { name: "Munich", country: "Germany", searchTerm: "munich germany" },
+  { name: "Cologne", country: "Germany", searchTerm: "cologne germany" },
+  { name: "Frankfurt", country: "Germany", searchTerm: "frankfurt germany" },
+  { name: "Stuttgart", country: "Germany", searchTerm: "stuttgart germany" },
+  { name: "Düsseldorf", country: "Germany", searchTerm: "dusseldorf germany" },
+  { name: "Dortmund", country: "Germany", searchTerm: "dortmund germany" },
+  { name: "Essen", country: "Germany", searchTerm: "essen germany" },
+  { name: "Leipzig", country: "Germany", searchTerm: "leipzig germany" },
+  { name: "Dresden", country: "Germany", searchTerm: "dresden germany" },
+  { name: "Nuremberg", country: "Germany", searchTerm: "nuremberg germany" },
+  // Ghana
+  { name: "Accra", country: "Ghana", searchTerm: "accra ghana" },
+  { name: "Kumasi", country: "Ghana", searchTerm: "kumasi ghana" },
+  // Greece
+  { name: "Athens", country: "Greece", searchTerm: "athens greece" },
+  {
+    name: "Thessaloniki",
+    country: "Greece",
+    searchTerm: "thessaloniki greece",
+  },
+  // Guatemala
+  {
+    name: "Guatemala City",
+    country: "Guatemala",
+    searchTerm: "guatemala city guatemala",
+  },
+  // Honduras
+  {
+    name: "Tegucigalpa",
+    country: "Honduras",
+    searchTerm: "tegucigalpa honduras",
+  },
+  // Hong Kong
+  { name: "Hong Kong", country: "Hong Kong", searchTerm: "hong kong" },
+  // Hungary
+  { name: "Budapest", country: "Hungary", searchTerm: "budapest hungary" },
+  // India
+  { name: "Mumbai", country: "India", searchTerm: "mumbai india" },
+  { name: "Delhi", country: "India", searchTerm: "delhi india" },
+  { name: "New Delhi", country: "India", searchTerm: "new delhi india" },
+  { name: "Bangalore", country: "India", searchTerm: "bangalore india" },
+  { name: "Bengaluru", country: "India", searchTerm: "bengaluru india" },
+  { name: "Hyderabad", country: "India", searchTerm: "hyderabad india" },
+  { name: "Ahmedabad", country: "India", searchTerm: "ahmedabad india" },
+  { name: "Chennai", country: "India", searchTerm: "chennai india" },
+  { name: "Kolkata", country: "India", searchTerm: "kolkata india" },
+  { name: "Surat", country: "India", searchTerm: "surat india" },
+  { name: "Pune", country: "India", searchTerm: "pune india" },
+  { name: "Jaipur", country: "India", searchTerm: "jaipur india" },
+  { name: "Lucknow", country: "India", searchTerm: "lucknow india" },
+  { name: "Kanpur", country: "India", searchTerm: "kanpur india" },
+  { name: "Nagpur", country: "India", searchTerm: "nagpur india" },
+  { name: "Indore", country: "India", searchTerm: "indore india" },
+  { name: "Thane", country: "India", searchTerm: "thane india" },
+  { name: "Bhopal", country: "India", searchTerm: "bhopal india" },
+  {
+    name: "Visakhapatnam",
+    country: "India",
+    searchTerm: "visakhapatnam india",
+  },
+  {
+    name: "Pimpri-Chinchwad",
+    country: "India",
+    searchTerm: "pimpri-chinchwad india",
+  },
+  { name: "Patna", country: "India", searchTerm: "patna india" },
+  { name: "Vadodara", country: "India", searchTerm: "vadodara india" },
+  { name: "Ghaziabad", country: "India", searchTerm: "ghaziabad india" },
+  { name: "Ludhiana", country: "India", searchTerm: "ludhiana india" },
+  { name: "Agra", country: "India", searchTerm: "agra india" },
+  { name: "Nashik", country: "India", searchTerm: "nashik india" },
+  { name: "Faridabad", country: "India", searchTerm: "faridabad india" },
+  { name: "Meerut", country: "India", searchTerm: "meerut india" },
+  { name: "Rajkot", country: "India", searchTerm: "rajkot india" },
+  {
+    name: "Kalyan-Dombivli",
+    country: "India",
+    searchTerm: "kalyan-dombivli india",
+  },
+  { name: "Vasai-Virar", country: "India", searchTerm: "vasai-virar india" },
+  { name: "Varanasi", country: "India", searchTerm: "varanasi india" },
+  { name: "Srinagar", country: "India", searchTerm: "srinagar india" },
+  { name: "Aurangabad", country: "India", searchTerm: "aurangabad india" },
+  { name: "Dhanbad", country: "India", searchTerm: "dhanbad india" },
+  { name: "Amritsar", country: "India", searchTerm: "amritsar india" },
+  { name: "Navi Mumbai", country: "India", searchTerm: "navi mumbai india" },
+  { name: "Allahabad", country: "India", searchTerm: "allahabad india" },
+  { name: "Prayagraj", country: "India", searchTerm: "prayagraj india" },
+  { name: "Ranchi", country: "India", searchTerm: "ranchi india" },
+  { name: "Howrah", country: "India", searchTerm: "howrah india" },
+  { name: "Coimbatore", country: "India", searchTerm: "coimbatore india" },
+  { name: "Jabalpur", country: "India", searchTerm: "jabalpur india" },
+  { name: "Gwalior", country: "India", searchTerm: "gwalior india" },
+  { name: "Vijayawada", country: "India", searchTerm: "vijayawada india" },
+  { name: "Jodhpur", country: "India", searchTerm: "jodhpur india" },
+  { name: "Madurai", country: "India", searchTerm: "madurai india" },
+  { name: "Raipur", country: "India", searchTerm: "raipur india" },
+  { name: "Kota", country: "India", searchTerm: "kota india" },
+  { name: "Chandigarh", country: "India", searchTerm: "chandigarh india" },
+  { name: "Guwahati", country: "India", searchTerm: "guwahati india" },
+  { name: "Solapur", country: "India", searchTerm: "solapur india" },
+  {
+    name: "Hubli-Dharwad",
+    country: "India",
+    searchTerm: "hubli-dharwad india",
+  },
+  { name: "Bareilly", country: "India", searchTerm: "bareilly india" },
+  { name: "Moradabad", country: "India", searchTerm: "moradabad india" },
+  { name: "Mysore", country: "India", searchTerm: "mysore india" },
+  { name: "Mysuru", country: "India", searchTerm: "mysuru india" },
+  { name: "Gurgaon", country: "India", searchTerm: "gurgaon india" },
+  { name: "Gurugram", country: "India", searchTerm: "gurugram india" },
+  { name: "Noida", country: "India", searchTerm: "noida india" },
+  {
+    name: "Tiruchirappalli",
+    country: "India",
+    searchTerm: "tiruchirappalli india",
+  },
+  { name: "Tiruppur", country: "India", searchTerm: "tiruppur india" },
+  { name: "Aligarh", country: "India", searchTerm: "aligarh india" },
+  { name: "Jalandhar", country: "India", searchTerm: "jalandhar india" },
+  { name: "Bhubaneswar", country: "India", searchTerm: "bhubaneswar india" },
+  { name: "Salem", country: "India", searchTerm: "salem india" },
+  { name: "Warangal", country: "India", searchTerm: "warangal india" },
+  {
+    name: "Mira-Bhayandar",
+    country: "India",
+    searchTerm: "mira-bhayandar india",
+  },
+  {
+    name: "Thiruvananthapuram",
+    country: "India",
+    searchTerm: "thiruvananthapuram india",
+  },
+  { name: "Bhiwandi", country: "India", searchTerm: "bhiwandi india" },
+  { name: "Saharanpur", country: "India", searchTerm: "saharanpur india" },
+  { name: "Guntur", country: "India", searchTerm: "guntur india" },
+  { name: "Bikaner", country: "India", searchTerm: "bikaner india" },
+  { name: "Amravati", country: "India", searchTerm: "amravati india" },
+  { name: "Noida", country: "India", searchTerm: "noida india" },
+  { name: "Dehradun", country: "India", searchTerm: "dehradun india" },
+  { name: "Kochi", country: "India", searchTerm: "kochi india" },
+  { name: "Cochin", country: "India", searchTerm: "cochin india" },
+  { name: "Udaipur", country: "India", searchTerm: "udaipur india" },
+  { name: "Siliguri", country: "India", searchTerm: "siliguri india" },
+  { name: "Mangalore", country: "India", searchTerm: "mangalore india" },
+  { name: "Mangaluru", country: "India", searchTerm: "mangaluru india" },
+  { name: "Nellore", country: "India", searchTerm: "nellore india" },
+  { name: "Kolhapur", country: "India", searchTerm: "kolhapur india" },
+  { name: "Ajmer", country: "India", searchTerm: "ajmer india" },
+  { name: "Loni", country: "India", searchTerm: "loni india" },
+  { name: "Jamshedpur", country: "India", searchTerm: "jamshedpur india" },
+  { name: "Shimoga", country: "India", searchTerm: "shimoga india" },
+  { name: "Akola", country: "India", searchTerm: "akola india" },
+  { name: "Cuttack", country: "India", searchTerm: "cuttack india" },
+  { name: "Firozabad", country: "India", searchTerm: "firozabad india" },
+  { name: "Bhilai", country: "India", searchTerm: "bhilai india" },
+  { name: "Kurnool", country: "India", searchTerm: "kurnool india" },
+  { name: "Bokaro", country: "India", searchTerm: "bokaro india" },
+  { name: "Durgapur", country: "India", searchTerm: "durgapur india" },
+  { name: "Asansol", country: "India", searchTerm: "asansol india" },
+  { name: "Rourkela", country: "India", searchTerm: "rourkela india" },
+  { name: "Nanded", country: "India", searchTerm: "nanded india" },
+  { name: "Kolhapur", country: "India", searchTerm: "kolhapur india" },
+  { name: "Sangli", country: "India", searchTerm: "sangli india" },
+  { name: "Tumkur", country: "India", searchTerm: "tumkur india" },
+  { name: "Latur", country: "India", searchTerm: "latur india" },
+  { name: "Gorakhpur", country: "India", searchTerm: "gorakhpur india" },
+  { name: "Bhavnagar", country: "India", searchTerm: "bhavnagar india" },
+  { name: "Jamnagar", country: "India", searchTerm: "jamnagar india" },
+  { name: "Ujjain", country: "India", searchTerm: "ujjain india" },
+  { name: "Jammu", country: "India", searchTerm: "jammu india" },
+  { name: "Belgaum", country: "India", searchTerm: "belgaum india" },
+  { name: "Belagavi", country: "India", searchTerm: "belagavi india" },
+  { name: "Pondicherry", country: "India", searchTerm: "pondicherry india" },
+  { name: "Puducherry", country: "India", searchTerm: "puducherry india" },
+  { name: "Shimla", country: "India", searchTerm: "shimla india" },
+  { name: "Imphal", country: "India", searchTerm: "imphal india" },
+  { name: "Shillong", country: "India", searchTerm: "shillong india" },
+  { name: "Agartala", country: "India", searchTerm: "agartala india" },
+  { name: "Gangtok", country: "India", searchTerm: "gangtok india" },
+  { name: "Itanagar", country: "India", searchTerm: "itanagar india" },
+  { name: "Aizawl", country: "India", searchTerm: "aizawl india" },
+  { name: "Kohima", country: "India", searchTerm: "kohima india" },
+  { name: "Panaji", country: "India", searchTerm: "panaji india" },
+  { name: "Dispur", country: "India", searchTerm: "dispur india" },
+  // Indonesia
+  { name: "Jakarta", country: "Indonesia", searchTerm: "jakarta indonesia" },
+  { name: "Surabaya", country: "Indonesia", searchTerm: "surabaya indonesia" },
+  { name: "Bandung", country: "Indonesia", searchTerm: "bandung indonesia" },
+  { name: "Medan", country: "Indonesia", searchTerm: "medan indonesia" },
+  { name: "Semarang", country: "Indonesia", searchTerm: "semarang indonesia" },
+  { name: "Makassar", country: "Indonesia", searchTerm: "makassar indonesia" },
+  {
+    name: "Palembang",
+    country: "Indonesia",
+    searchTerm: "palembang indonesia",
+  },
+  {
+    name: "Tangerang",
+    country: "Indonesia",
+    searchTerm: "tangerang indonesia",
+  },
+  { name: "Depok", country: "Indonesia", searchTerm: "depok indonesia" },
+  { name: "Bali", country: "Indonesia", searchTerm: "bali indonesia" },
+  {
+    name: "Yogyakarta",
+    country: "Indonesia",
+    searchTerm: "yogyakarta indonesia",
+  },
+  // Iran
+  { name: "Tehran", country: "Iran", searchTerm: "tehran iran" },
+  { name: "Mashhad", country: "Iran", searchTerm: "mashhad iran" },
+  { name: "Isfahan", country: "Iran", searchTerm: "isfahan iran" },
+  { name: "Tabriz", country: "Iran", searchTerm: "tabriz iran" },
+  { name: "Shiraz", country: "Iran", searchTerm: "shiraz iran" },
+  // Iraq
+  { name: "Baghdad", country: "Iraq", searchTerm: "baghdad iraq" },
+  { name: "Basra", country: "Iraq", searchTerm: "basra iraq" },
+  { name: "Mosul", country: "Iraq", searchTerm: "mosul iraq" },
+  { name: "Erbil", country: "Iraq", searchTerm: "erbil iraq" },
+  // Ireland
+  { name: "Dublin", country: "Ireland", searchTerm: "dublin ireland" },
+  { name: "Cork", country: "Ireland", searchTerm: "cork ireland" },
+  // Israel
+  { name: "Tel Aviv", country: "Israel", searchTerm: "tel aviv israel" },
+  { name: "Jerusalem", country: "Israel", searchTerm: "jerusalem israel" },
+  { name: "Haifa", country: "Israel", searchTerm: "haifa israel" },
+  // Italy
+  { name: "Rome", country: "Italy", searchTerm: "rome italy" },
+  { name: "Milan", country: "Italy", searchTerm: "milan italy" },
+  { name: "Naples", country: "Italy", searchTerm: "naples italy" },
+  { name: "Turin", country: "Italy", searchTerm: "turin italy" },
+  { name: "Palermo", country: "Italy", searchTerm: "palermo italy" },
+  { name: "Genoa", country: "Italy", searchTerm: "genoa italy" },
+  { name: "Bologna", country: "Italy", searchTerm: "bologna italy" },
+  { name: "Florence", country: "Italy", searchTerm: "florence italy" },
+  { name: "Venice", country: "Italy", searchTerm: "venice italy" },
+  // Ivory Coast
+  {
+    name: "Abidjan",
+    country: "Ivory Coast",
+    searchTerm: "abidjan ivory coast",
+  },
+  // Jamaica
+  { name: "Kingston", country: "Jamaica", searchTerm: "kingston jamaica" },
+  // Japan
+  { name: "Tokyo", country: "Japan", searchTerm: "tokyo japan" },
+  { name: "Osaka", country: "Japan", searchTerm: "osaka japan" },
+  { name: "Yokohama", country: "Japan", searchTerm: "yokohama japan" },
+  { name: "Nagoya", country: "Japan", searchTerm: "nagoya japan" },
+  { name: "Sapporo", country: "Japan", searchTerm: "sapporo japan" },
+  { name: "Kobe", country: "Japan", searchTerm: "kobe japan" },
+  { name: "Kyoto", country: "Japan", searchTerm: "kyoto japan" },
+  { name: "Fukuoka", country: "Japan", searchTerm: "fukuoka japan" },
+  { name: "Hiroshima", country: "Japan", searchTerm: "hiroshima japan" },
+  { name: "Sendai", country: "Japan", searchTerm: "sendai japan" },
+  // Jordan
+  { name: "Amman", country: "Jordan", searchTerm: "amman jordan" },
+  // Kazakhstan
+  { name: "Almaty", country: "Kazakhstan", searchTerm: "almaty kazakhstan" },
+  {
+    name: "Nur-Sultan",
+    country: "Kazakhstan",
+    searchTerm: "nur-sultan kazakhstan",
+  },
+  { name: "Astana", country: "Kazakhstan", searchTerm: "astana kazakhstan" },
+  // Kenya
+  { name: "Nairobi", country: "Kenya", searchTerm: "nairobi kenya" },
+  { name: "Mombasa", country: "Kenya", searchTerm: "mombasa kenya" },
+  // Kuwait
+  { name: "Kuwait City", country: "Kuwait", searchTerm: "kuwait city kuwait" },
+  // Kyrgyzstan
+  { name: "Bishkek", country: "Kyrgyzstan", searchTerm: "bishkek kyrgyzstan" },
+  // Laos
+  { name: "Vientiane", country: "Laos", searchTerm: "vientiane laos" },
+  // Lebanon
+  { name: "Beirut", country: "Lebanon", searchTerm: "beirut lebanon" },
+  // Libya
+  { name: "Tripoli", country: "Libya", searchTerm: "tripoli libya" },
+  { name: "Benghazi", country: "Libya", searchTerm: "benghazi libya" },
+  // Malaysia
+  {
+    name: "Kuala Lumpur",
+    country: "Malaysia",
+    searchTerm: "kuala lumpur malaysia",
+  },
+  {
+    name: "George Town",
+    country: "Malaysia",
+    searchTerm: "george town malaysia",
+  },
+  {
+    name: "Johor Bahru",
+    country: "Malaysia",
+    searchTerm: "johor bahru malaysia",
+  },
+  { name: "Ipoh", country: "Malaysia", searchTerm: "ipoh malaysia" },
+  {
+    name: "Kota Kinabalu",
+    country: "Malaysia",
+    searchTerm: "kota kinabalu malaysia",
+  },
+  // Mali
+  { name: "Bamako", country: "Mali", searchTerm: "bamako mali" },
+  // Mexico
+  { name: "Mexico City", country: "Mexico", searchTerm: "mexico city mexico" },
+  { name: "Guadalajara", country: "Mexico", searchTerm: "guadalajara mexico" },
+  { name: "Monterrey", country: "Mexico", searchTerm: "monterrey mexico" },
+  { name: "Puebla", country: "Mexico", searchTerm: "puebla mexico" },
+  { name: "Tijuana", country: "Mexico", searchTerm: "tijuana mexico" },
+  { name: "León", country: "Mexico", searchTerm: "leon mexico" },
+  { name: "Juárez", country: "Mexico", searchTerm: "juarez mexico" },
+  { name: "Cancún", country: "Mexico", searchTerm: "cancun mexico" },
+  // Moldova
+  { name: "Chișinău", country: "Moldova", searchTerm: "chisinau moldova" },
+  // Mongolia
+  {
+    name: "Ulaanbaatar",
+    country: "Mongolia",
+    searchTerm: "ulaanbaatar mongolia",
+  },
+  // Morocco
+  { name: "Casablanca", country: "Morocco", searchTerm: "casablanca morocco" },
+  { name: "Rabat", country: "Morocco", searchTerm: "rabat morocco" },
+  { name: "Fez", country: "Morocco", searchTerm: "fez morocco" },
+  { name: "Marrakech", country: "Morocco", searchTerm: "marrakech morocco" },
+  { name: "Tangier", country: "Morocco", searchTerm: "tangier morocco" },
+  // Mozambique
+  { name: "Maputo", country: "Mozambique", searchTerm: "maputo mozambique" },
+  // Myanmar
+  { name: "Yangon", country: "Myanmar", searchTerm: "yangon myanmar" },
+  { name: "Mandalay", country: "Myanmar", searchTerm: "mandalay myanmar" },
+  { name: "Naypyidaw", country: "Myanmar", searchTerm: "naypyidaw myanmar" },
+  // Nepal
+  { name: "Kathmandu", country: "Nepal", searchTerm: "kathmandu nepal" },
+  { name: "Pokhara", country: "Nepal", searchTerm: "pokhara nepal" },
+  // Netherlands
+  {
+    name: "Amsterdam",
+    country: "Netherlands",
+    searchTerm: "amsterdam netherlands",
+  },
+  {
+    name: "Rotterdam",
+    country: "Netherlands",
+    searchTerm: "rotterdam netherlands",
+  },
+  {
+    name: "The Hague",
+    country: "Netherlands",
+    searchTerm: "the hague netherlands",
+  },
+  {
+    name: "Utrecht",
+    country: "Netherlands",
+    searchTerm: "utrecht netherlands",
+  },
+  // New Zealand
+  {
+    name: "Auckland",
+    country: "New Zealand",
+    searchTerm: "auckland new zealand",
+  },
+  {
+    name: "Wellington",
+    country: "New Zealand",
+    searchTerm: "wellington new zealand",
+  },
+  {
+    name: "Christchurch",
+    country: "New Zealand",
+    searchTerm: "christchurch new zealand",
+  },
+  // Nicaragua
+  { name: "Managua", country: "Nicaragua", searchTerm: "managua nicaragua" },
+  // Niger
+  { name: "Niamey", country: "Niger", searchTerm: "niamey niger" },
+  // Nigeria
+  { name: "Lagos", country: "Nigeria", searchTerm: "lagos nigeria" },
+  { name: "Kano", country: "Nigeria", searchTerm: "kano nigeria" },
+  { name: "Ibadan", country: "Nigeria", searchTerm: "ibadan nigeria" },
+  { name: "Abuja", country: "Nigeria", searchTerm: "abuja nigeria" },
+  {
+    name: "Port Harcourt",
+    country: "Nigeria",
+    searchTerm: "port harcourt nigeria",
+  },
+  { name: "Benin City", country: "Nigeria", searchTerm: "benin city nigeria" },
+  // North Korea
+  {
+    name: "Pyongyang",
+    country: "North Korea",
+    searchTerm: "pyongyang north korea",
+  },
+  // Norway
+  { name: "Oslo", country: "Norway", searchTerm: "oslo norway" },
+  { name: "Bergen", country: "Norway", searchTerm: "bergen norway" },
+  // Oman
+  { name: "Muscat", country: "Oman", searchTerm: "muscat oman" },
+  // Pakistan
+  { name: "Karachi", country: "Pakistan", searchTerm: "karachi pakistan" },
+  { name: "Lahore", country: "Pakistan", searchTerm: "lahore pakistan" },
+  { name: "Islamabad", country: "Pakistan", searchTerm: "islamabad pakistan" },
+  {
+    name: "Faisalabad",
+    country: "Pakistan",
+    searchTerm: "faisalabad pakistan",
+  },
+  {
+    name: "Rawalpindi",
+    country: "Pakistan",
+    searchTerm: "rawalpindi pakistan",
+  },
+  { name: "Multan", country: "Pakistan", searchTerm: "multan pakistan" },
+  { name: "Peshawar", country: "Pakistan", searchTerm: "peshawar pakistan" },
+  { name: "Quetta", country: "Pakistan", searchTerm: "quetta pakistan" },
+  // Panama
+  { name: "Panama City", country: "Panama", searchTerm: "panama city panama" },
+  // Paraguay
+  { name: "Asunción", country: "Paraguay", searchTerm: "asuncion paraguay" },
+  // Peru
+  { name: "Lima", country: "Peru", searchTerm: "lima peru" },
+  { name: "Arequipa", country: "Peru", searchTerm: "arequipa peru" },
+  { name: "Trujillo", country: "Peru", searchTerm: "trujillo peru" },
+  // Philippines
+  { name: "Manila", country: "Philippines", searchTerm: "manila philippines" },
+  {
+    name: "Quezon City",
+    country: "Philippines",
+    searchTerm: "quezon city philippines",
+  },
+  { name: "Davao", country: "Philippines", searchTerm: "davao philippines" },
+  {
+    name: "Cebu City",
+    country: "Philippines",
+    searchTerm: "cebu city philippines",
+  },
+  {
+    name: "Zamboanga",
+    country: "Philippines",
+    searchTerm: "zamboanga philippines",
+  },
+  // Poland
+  { name: "Warsaw", country: "Poland", searchTerm: "warsaw poland" },
+  { name: "Kraków", country: "Poland", searchTerm: "krakow poland" },
+  { name: "Łódź", country: "Poland", searchTerm: "lodz poland" },
+  { name: "Wrocław", country: "Poland", searchTerm: "wroclaw poland" },
+  { name: "Poznań", country: "Poland", searchTerm: "poznan poland" },
+  // Portugal
+  { name: "Lisbon", country: "Portugal", searchTerm: "lisbon portugal" },
+  { name: "Porto", country: "Portugal", searchTerm: "porto portugal" },
+  // Qatar
+  { name: "Doha", country: "Qatar", searchTerm: "doha qatar" },
+  // Romania
+  { name: "Bucharest", country: "Romania", searchTerm: "bucharest romania" },
+  {
+    name: "Cluj-Napoca",
+    country: "Romania",
+    searchTerm: "cluj-napoca romania",
+  },
+  // Russia
+  { name: "Moscow", country: "Russia", searchTerm: "moscow russia" },
+  {
+    name: "Saint Petersburg",
+    country: "Russia",
+    searchTerm: "saint petersburg russia",
+  },
+  { name: "Novosibirsk", country: "Russia", searchTerm: "novosibirsk russia" },
+  {
+    name: "Yekaterinburg",
+    country: "Russia",
+    searchTerm: "yekaterinburg russia",
+  },
+  { name: "Kazan", country: "Russia", searchTerm: "kazan russia" },
+  {
+    name: "Nizhny Novgorod",
+    country: "Russia",
+    searchTerm: "nizhny novgorod russia",
+  },
+  { name: "Chelyabinsk", country: "Russia", searchTerm: "chelyabinsk russia" },
+  { name: "Omsk", country: "Russia", searchTerm: "omsk russia" },
+  { name: "Samara", country: "Russia", searchTerm: "samara russia" },
+  {
+    name: "Rostov-on-Don",
+    country: "Russia",
+    searchTerm: "rostov-on-don russia",
+  },
+  { name: "Vladivostok", country: "Russia", searchTerm: "vladivostok russia" },
+  // Rwanda
+  { name: "Kigali", country: "Rwanda", searchTerm: "kigali rwanda" },
+  // Saudi Arabia
+  {
+    name: "Riyadh",
+    country: "Saudi Arabia",
+    searchTerm: "riyadh saudi arabia",
+  },
+  {
+    name: "Jeddah",
+    country: "Saudi Arabia",
+    searchTerm: "jeddah saudi arabia",
+  },
+  { name: "Mecca", country: "Saudi Arabia", searchTerm: "mecca saudi arabia" },
+  {
+    name: "Medina",
+    country: "Saudi Arabia",
+    searchTerm: "medina saudi arabia",
+  },
+  {
+    name: "Dammam",
+    country: "Saudi Arabia",
+    searchTerm: "dammam saudi arabia",
+  },
+  // Senegal
+  { name: "Dakar", country: "Senegal", searchTerm: "dakar senegal" },
+  // Serbia
+  { name: "Belgrade", country: "Serbia", searchTerm: "belgrade serbia" },
+  // Singapore
+  { name: "Singapore", country: "Singapore", searchTerm: "singapore" },
+  // Slovakia
+  {
+    name: "Bratislava",
+    country: "Slovakia",
+    searchTerm: "bratislava slovakia",
+  },
+  // Somalia
+  { name: "Mogadishu", country: "Somalia", searchTerm: "mogadishu somalia" },
+  // South Africa
+  {
+    name: "Johannesburg",
+    country: "South Africa",
+    searchTerm: "johannesburg south africa",
+  },
+  {
+    name: "Cape Town",
+    country: "South Africa",
+    searchTerm: "cape town south africa",
+  },
+  {
+    name: "Durban",
+    country: "South Africa",
+    searchTerm: "durban south africa",
+  },
+  {
+    name: "Pretoria",
+    country: "South Africa",
+    searchTerm: "pretoria south africa",
+  },
+  {
+    name: "Port Elizabeth",
+    country: "South Africa",
+    searchTerm: "port elizabeth south africa",
+  },
+  // South Korea
+  { name: "Seoul", country: "South Korea", searchTerm: "seoul south korea" },
+  { name: "Busan", country: "South Korea", searchTerm: "busan south korea" },
+  {
+    name: "Incheon",
+    country: "South Korea",
+    searchTerm: "incheon south korea",
+  },
+  { name: "Daegu", country: "South Korea", searchTerm: "daegu south korea" },
+  {
+    name: "Daejeon",
+    country: "South Korea",
+    searchTerm: "daejeon south korea",
+  },
+  {
+    name: "Gwangju",
+    country: "South Korea",
+    searchTerm: "gwangju south korea",
+  },
+  // Spain
+  { name: "Madrid", country: "Spain", searchTerm: "madrid spain" },
+  { name: "Barcelona", country: "Spain", searchTerm: "barcelona spain" },
+  { name: "Valencia", country: "Spain", searchTerm: "valencia spain" },
+  { name: "Seville", country: "Spain", searchTerm: "seville spain" },
+  { name: "Zaragoza", country: "Spain", searchTerm: "zaragoza spain" },
+  { name: "Málaga", country: "Spain", searchTerm: "malaga spain" },
+  { name: "Bilbao", country: "Spain", searchTerm: "bilbao spain" },
+  // Sri Lanka
+  { name: "Colombo", country: "Sri Lanka", searchTerm: "colombo sri lanka" },
+  { name: "Kandy", country: "Sri Lanka", searchTerm: "kandy sri lanka" },
+  // Sudan
+  { name: "Khartoum", country: "Sudan", searchTerm: "khartoum sudan" },
+  // Sweden
+  { name: "Stockholm", country: "Sweden", searchTerm: "stockholm sweden" },
+  { name: "Gothenburg", country: "Sweden", searchTerm: "gothenburg sweden" },
+  { name: "Malmö", country: "Sweden", searchTerm: "malmo sweden" },
+  // Switzerland
+  { name: "Zurich", country: "Switzerland", searchTerm: "zurich switzerland" },
+  { name: "Geneva", country: "Switzerland", searchTerm: "geneva switzerland" },
+  { name: "Basel", country: "Switzerland", searchTerm: "basel switzerland" },
+  { name: "Bern", country: "Switzerland", searchTerm: "bern switzerland" },
+  // Syria
+  { name: "Damascus", country: "Syria", searchTerm: "damascus syria" },
+  { name: "Aleppo", country: "Syria", searchTerm: "aleppo syria" },
+  // Taiwan
+  { name: "Taipei", country: "Taiwan", searchTerm: "taipei taiwan" },
+  { name: "Kaohsiung", country: "Taiwan", searchTerm: "kaohsiung taiwan" },
+  // Tajikistan
+  {
+    name: "Dushanbe",
+    country: "Tajikistan",
+    searchTerm: "dushanbe tajikistan",
+  },
+  // Tanzania
+  {
+    name: "Dar es Salaam",
+    country: "Tanzania",
+    searchTerm: "dar es salaam tanzania",
+  },
+  { name: "Dodoma", country: "Tanzania", searchTerm: "dodoma tanzania" },
+  // Thailand
+  { name: "Bangkok", country: "Thailand", searchTerm: "bangkok thailand" },
+  {
+    name: "Chiang Mai",
+    country: "Thailand",
+    searchTerm: "chiang mai thailand",
+  },
+  { name: "Pattaya", country: "Thailand", searchTerm: "pattaya thailand" },
+  { name: "Phuket", country: "Thailand", searchTerm: "phuket thailand" },
+  // Tunisia
+  { name: "Tunis", country: "Tunisia", searchTerm: "tunis tunisia" },
+  // Turkey
+  { name: "Istanbul", country: "Turkey", searchTerm: "istanbul turkey" },
+  { name: "Ankara", country: "Turkey", searchTerm: "ankara turkey" },
+  { name: "Izmir", country: "Turkey", searchTerm: "izmir turkey" },
+  { name: "Bursa", country: "Turkey", searchTerm: "bursa turkey" },
+  { name: "Adana", country: "Turkey", searchTerm: "adana turkey" },
+  { name: "Antalya", country: "Turkey", searchTerm: "antalya turkey" },
+  // Turkmenistan
+  {
+    name: "Ashgabat",
+    country: "Turkmenistan",
+    searchTerm: "ashgabat turkmenistan",
+  },
+  // Uganda
+  { name: "Kampala", country: "Uganda", searchTerm: "kampala uganda" },
+  // Ukraine
+  { name: "Kyiv", country: "Ukraine", searchTerm: "kyiv ukraine" },
+  { name: "Kharkiv", country: "Ukraine", searchTerm: "kharkiv ukraine" },
+  { name: "Odessa", country: "Ukraine", searchTerm: "odessa ukraine" },
+  { name: "Dnipro", country: "Ukraine", searchTerm: "dnipro ukraine" },
+  { name: "Lviv", country: "Ukraine", searchTerm: "lviv ukraine" },
+  // United Arab Emirates
+  {
+    name: "Dubai",
+    country: "United Arab Emirates",
+    searchTerm: "dubai uae united arab emirates",
+  },
+  {
+    name: "Abu Dhabi",
+    country: "United Arab Emirates",
+    searchTerm: "abu dhabi uae united arab emirates",
+  },
+  {
+    name: "Sharjah",
+    country: "United Arab Emirates",
+    searchTerm: "sharjah uae united arab emirates",
+  },
+  // United Kingdom
+  {
+    name: "London",
+    country: "United Kingdom",
+    searchTerm: "london united kingdom uk",
+  },
+  {
+    name: "Birmingham",
+    country: "United Kingdom",
+    searchTerm: "birmingham united kingdom uk",
+  },
+  {
+    name: "Manchester",
+    country: "United Kingdom",
+    searchTerm: "manchester united kingdom uk",
+  },
+  {
+    name: "Glasgow",
+    country: "United Kingdom",
+    searchTerm: "glasgow united kingdom uk",
+  },
+  {
+    name: "Liverpool",
+    country: "United Kingdom",
+    searchTerm: "liverpool united kingdom uk",
+  },
+  {
+    name: "Leeds",
+    country: "United Kingdom",
+    searchTerm: "leeds united kingdom uk",
+  },
+  {
+    name: "Edinburgh",
+    country: "United Kingdom",
+    searchTerm: "edinburgh united kingdom uk",
+  },
+  {
+    name: "Bristol",
+    country: "United Kingdom",
+    searchTerm: "bristol united kingdom uk",
+  },
+  {
+    name: "Sheffield",
+    country: "United Kingdom",
+    searchTerm: "sheffield united kingdom uk",
+  },
+  {
+    name: "Cardiff",
+    country: "United Kingdom",
+    searchTerm: "cardiff united kingdom uk",
+  },
+  {
+    name: "Belfast",
+    country: "United Kingdom",
+    searchTerm: "belfast united kingdom uk",
+  },
+  // United States
+  {
+    name: "New York",
+    country: "United States",
+    searchTerm: "new york united states usa",
+  },
+  {
+    name: "Los Angeles",
+    country: "United States",
+    searchTerm: "los angeles united states usa",
+  },
+  {
+    name: "Chicago",
+    country: "United States",
+    searchTerm: "chicago united states usa",
+  },
+  {
+    name: "Houston",
+    country: "United States",
+    searchTerm: "houston united states usa",
+  },
+  {
+    name: "Phoenix",
+    country: "United States",
+    searchTerm: "phoenix united states usa",
+  },
+  {
+    name: "Philadelphia",
+    country: "United States",
+    searchTerm: "philadelphia united states usa",
+  },
+  {
+    name: "San Antonio",
+    country: "United States",
+    searchTerm: "san antonio united states usa",
+  },
+  {
+    name: "San Diego",
+    country: "United States",
+    searchTerm: "san diego united states usa",
+  },
+  {
+    name: "Dallas",
+    country: "United States",
+    searchTerm: "dallas united states usa",
+  },
+  {
+    name: "San Jose",
+    country: "United States",
+    searchTerm: "san jose united states usa",
+  },
+  {
+    name: "Austin",
+    country: "United States",
+    searchTerm: "austin united states usa",
+  },
+  {
+    name: "Jacksonville",
+    country: "United States",
+    searchTerm: "jacksonville united states usa",
+  },
+  {
+    name: "Fort Worth",
+    country: "United States",
+    searchTerm: "fort worth united states usa",
+  },
+  {
+    name: "Columbus",
+    country: "United States",
+    searchTerm: "columbus united states usa",
+  },
+  {
+    name: "Charlotte",
+    country: "United States",
+    searchTerm: "charlotte united states usa",
+  },
+  {
+    name: "Indianapolis",
+    country: "United States",
+    searchTerm: "indianapolis united states usa",
+  },
+  {
+    name: "San Francisco",
+    country: "United States",
+    searchTerm: "san francisco united states usa",
+  },
+  {
+    name: "Seattle",
+    country: "United States",
+    searchTerm: "seattle united states usa",
+  },
+  {
+    name: "Denver",
+    country: "United States",
+    searchTerm: "denver united states usa",
+  },
+  {
+    name: "Washington DC",
+    country: "United States",
+    searchTerm: "washington dc united states usa",
+  },
+  {
+    name: "Nashville",
+    country: "United States",
+    searchTerm: "nashville united states usa",
+  },
+  {
+    name: "Oklahoma City",
+    country: "United States",
+    searchTerm: "oklahoma city united states usa",
+  },
+  {
+    name: "El Paso",
+    country: "United States",
+    searchTerm: "el paso united states usa",
+  },
+  {
+    name: "Boston",
+    country: "United States",
+    searchTerm: "boston united states usa",
+  },
+  {
+    name: "Portland",
+    country: "United States",
+    searchTerm: "portland united states usa",
+  },
+  {
+    name: "Las Vegas",
+    country: "United States",
+    searchTerm: "las vegas united states usa",
+  },
+  {
+    name: "Memphis",
+    country: "United States",
+    searchTerm: "memphis united states usa",
+  },
+  {
+    name: "Atlanta",
+    country: "United States",
+    searchTerm: "atlanta united states usa",
+  },
+  {
+    name: "Miami",
+    country: "United States",
+    searchTerm: "miami united states usa",
+  },
+  {
+    name: "Minneapolis",
+    country: "United States",
+    searchTerm: "minneapolis united states usa",
+  },
+  {
+    name: "New Orleans",
+    country: "United States",
+    searchTerm: "new orleans united states usa",
+  },
+  {
+    name: "Detroit",
+    country: "United States",
+    searchTerm: "detroit united states usa",
+  },
+  {
+    name: "Baltimore",
+    country: "United States",
+    searchTerm: "baltimore united states usa",
+  },
+  {
+    name: "Milwaukee",
+    country: "United States",
+    searchTerm: "milwaukee united states usa",
+  },
+  {
+    name: "Honolulu",
+    country: "United States",
+    searchTerm: "honolulu united states usa",
+  },
+  {
+    name: "Anchorage",
+    country: "United States",
+    searchTerm: "anchorage united states usa",
+  },
+  // Uruguay
+  { name: "Montevideo", country: "Uruguay", searchTerm: "montevideo uruguay" },
+  // Uzbekistan
+  {
+    name: "Tashkent",
+    country: "Uzbekistan",
+    searchTerm: "tashkent uzbekistan",
+  },
+  {
+    name: "Samarkand",
+    country: "Uzbekistan",
+    searchTerm: "samarkand uzbekistan",
+  },
+  // Venezuela
+  { name: "Caracas", country: "Venezuela", searchTerm: "caracas venezuela" },
+  {
+    name: "Maracaibo",
+    country: "Venezuela",
+    searchTerm: "maracaibo venezuela",
+  },
+  // Vietnam
+  { name: "Hanoi", country: "Vietnam", searchTerm: "hanoi vietnam" },
+  {
+    name: "Ho Chi Minh City",
+    country: "Vietnam",
+    searchTerm: "ho chi minh city vietnam",
+  },
+  { name: "Da Nang", country: "Vietnam", searchTerm: "da nang vietnam" },
+  { name: "Haiphong", country: "Vietnam", searchTerm: "haiphong vietnam" },
+  // Yemen
+  { name: "Sanaa", country: "Yemen", searchTerm: "sanaa yemen" },
+  { name: "Aden", country: "Yemen", searchTerm: "aden yemen" },
+  // Zambia
+  { name: "Lusaka", country: "Zambia", searchTerm: "lusaka zambia" },
+  // Zimbabwe
+  { name: "Harare", country: "Zimbabwe", searchTerm: "harare zimbabwe" },
+  { name: "Bulawayo", country: "Zimbabwe", searchTerm: "bulawayo zimbabwe" },
+];

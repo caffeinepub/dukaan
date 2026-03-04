@@ -1,15 +1,19 @@
-# Specification
+# Dukaan
 
-## Summary
-**Goal:** Add a global city search, extended product pricing fields, and product amenities/attributes to the Dukaan marketplace.
+## Current State
+The ProductFormPage.tsx has a category dropdown and a free-text product name field. There is no product name suggestion feature.
 
-**Planned changes:**
-- Replace the city input in ShopkeeperRegistration and ShopkeeperNetwork filter with a searchable dropdown backed by a static worldwide city dataset grouped by country.
-- Extend the backend product data model with new pricing fields: MRP, wholesale price, discount percentage, and unit of measurement.
-- Extend the backend product data model with amenity fields: features list, tags list, and warranty/shelf-life text.
-- Update `addProduct` and `updateProduct` backend methods to accept and return all new fields, with safe defaults for existing products.
-- Add a "Pricing Details" section and a "Product Amenities" section to the ProductFormPage with appropriate input fields and validation.
-- Update ProductDetail page to display MRP (with strikethrough when discounted), selling price, wholesale price, discount badge, feature pills, tags, and warranty/shelf-life info.
-- Update ProductCard to show a discount badge when a discount percentage is set.
+## Requested Changes (Diff)
 
-**User-visible outcome:** Shopkeepers can select any city worldwide during registration and filtering. Products can be listed with detailed pricing (MRP, wholesale, discount) and amenities (features, tags, warranty), all visible to buyers on product cards and detail pages.
+### Add
+- A `productSuggestions.ts` data file mapping each product category to a list of common product names (e.g., "Groceries & Staples" -> ["Sugar", "Basmati Rice", "Wheat Flour", "Atta", "Maida", "Dal", "Rice", "Salt", "Mustard Oil", ...])
+- When a category is selected in the Add Product form, show a horizontal scrollable row of suggested product name chips below the Product Name input
+- Clicking a chip auto-fills the product name field
+- Suggestions appear only when category is selected and product name field is empty or matches a suggestion
+- Cover all 30 categories with relevant Indian product names
+
+### Modify
+- `ProductFormPage.tsx`: After the product name input, add a suggestions section that shows clickable chips based on the selected category
+
+### Remove
+- Nothing removed
