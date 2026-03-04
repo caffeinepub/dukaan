@@ -1,3 +1,4 @@
+import CitySearchInput from "@/components/common/CitySearchInput";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -102,8 +103,8 @@ export default function ShopkeeperRegistration() {
       if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
     };
 
-  const handleLocationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setForm((prev) => ({ ...prev, location: e.target.value }));
+  const handleLocationChange = (value: string) => {
+    setForm((prev) => ({ ...prev, location: value }));
     if (errors.location)
       setErrors((prev) => ({ ...prev, location: undefined }));
   };
@@ -183,17 +184,16 @@ export default function ShopkeeperRegistration() {
           )}
         </div>
 
-        {/* Location - City Text Input */}
+        {/* Location - City Dropdown */}
         <div className="space-y-1.5">
           <Label className="font-body font-semibold text-sm">
             City / Location *
           </Label>
-          <Input
+          <CitySearchInput
             value={form.location}
             onChange={handleLocationChange}
-            placeholder="e.g. Mumbai, Delhi, Pune, Surat..."
-            className="rounded-xl font-body"
-            data-ocid="registration.location.input"
+            placeholder="Search and select your city..."
+            data-ocid="registration.location.select"
           />
           {errors.location && (
             <p className="text-xs text-destructive font-body">
